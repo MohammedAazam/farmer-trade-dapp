@@ -17,6 +17,120 @@ To build a **decentralized trade platform** that enables:
 
 ---
 
+## 🚀 How to Run This Project Locally
+
+Follow these simple steps to run the full blockchain-based auction DApp on your system.
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd farmer-trade-dapp
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+#### Frontend
+```bash
+cd frontend
+npm install
+```
+
+#### Blockchain
+```bash
+cd ../blockchain
+npm install
+```
+
+---
+
+### 3️⃣ Start Local Blockchain (Hardhat Network)
+
+```bash
+npx hardhat node
+```
+
+> Keep this terminal **running**. This starts a local blockchain and provides free test ETH.
+
+---
+
+### 4️⃣ Deploy Smart Contract Locally
+
+Open a **new terminal** in the `blockchain` folder:
+
+```bash
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+Copy the deployed **contract address** and update it inside:
+
+```
+frontend/lib/contract.js
+```
+
+---
+
+### 5️⃣ Setup MetaMask Local Network
+
+Add this network manually in MetaMask:
+
+```
+Network Name: Hardhat Local
+RPC URL: http://127.0.0.1:8545
+Chain ID: 31337
+Currency Symbol: ETH
+```
+
+Import **any two private keys** shown in the Hardhat terminal to simulate:
+
+- **Farmer account**
+- **Buyer (Auctioner) account**
+
+Each account will receive **10,000 ETH test balance**.
+
+---
+
+### 6️⃣ Switch Accounts (Farmer / Buyer Simulation)
+
+Use the **MetaMask account switcher** to change roles:
+
+- **Farmer account** → List crops & end auctions  
+- **Buyer account** → Place bids  
+
+You can switch accounts anytime to simulate real multi-user auction flow.
+
+---
+
+### 7️⃣ Run Frontend
+
+```bash
+cd ../frontend
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+### ✅ Done!
+
+You can now:
+- Connect MetaMask  
+- Switch accounts as Farmer / Buyer  
+- List crops  
+- Place bids  
+- End auctions  
+- View live blockchain data  
+---
+
 ## 🧩 Phase 1 — Current Status (Updated)
 
 ### ✅ Completed
@@ -39,11 +153,6 @@ To build a **decentralized trade platform** that enables:
 - **Role-based UI using tabs (Farmer / Buyer)**
 - **Professional error handling & UX improvements**
 
-### ⏳ Pending
-
-- Public testnet deployment (Sepolia)
-- Production deployment
-- Mobile UI optimization
 
 ---
 
