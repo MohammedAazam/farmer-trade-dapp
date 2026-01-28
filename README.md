@@ -2,7 +2,7 @@
 
 This repository contains the **current development progress** of a blockchain-based agricultural trade platform aimed at improving **farmer profitability, transparency, and trust** using **decentralized auctions and smart contracts**.
 
-> ⚠️ This README reflects **work completed till now** (architecture + smart contract + deployment setup). Frontend integration and live deployment will be completed in the next phase.
+> ✅ This README reflects the **actual completed work till now**, including **full backend + frontend + smart contract + local blockchain deployment + working UI**.
 
 ---
 
@@ -10,39 +10,44 @@ This repository contains the **current development progress** of a blockchain-ba
 
 To build a **decentralized trade platform** that enables:
 
-* Transparent **crop auctions**
-* Fair **price discovery**
-* Trustless **farmer-to-buyer transactions**
-* (Future phases) Forward trading and agricultural credit
+- Transparent **crop auctions**
+- Fair **price discovery**
+- Trustless **farmer-to-buyer transactions**
+- (Future phases) Forward trading and agricultural credit
 
 ---
 
-## 🧩 Phase 1 — Current Status (Completed Till Now)
+## 🧩 Phase 1 — Current Status (Updated)
 
 ### ✅ Completed
 
-* Full **project architecture design**
-* Blockchain environment setup using **Hardhat**
-* **Auction smart contract** written in Solidity
-* Smart contract **compiled successfully**
-* Deployment pipeline configured for:
+- Full **system architecture design**
+- Blockchain environment setup using **Hardhat**
+- **Auction smart contract** implemented in Solidity
+- Smart contract **compiled & tested successfully**
+- Deployment pipeline configured for:
+  - Ethereum Sepolia Testnet
+  - Local Hardhat Blockchain (Fake Chain)
+- Local blockchain node running with **10,000 ETH test accounts**
+- **Smart contract deployed locally**
+- Wallet integration using **MetaMask**
+- **Full frontend integration using Next.js + ethers.js**
+- **Farmer dashboard** for crop listing
+- **Buyer dashboard** for live bidding
+- **Auction settlement system** (End Auction)
+- **Live blockchain data reading** (display crop ID, price, status, highest bid, farmer & winner address)
+- **Role-based UI using tabs (Farmer / Buyer)**
+- **Professional error handling & UX improvements**
 
-  * Ethereum Sepolia Testnet
-  * Local Hardhat Network
-* RPC configuration using **Alchemy**
-* Wallet integration planning using **MetaMask**
+### ⏳ Pending
 
-### ⏳ Pending (Next Step)
-
-* Testnet funding (Sepolia faucet ETH)
-* Smart contract live deployment
-* Frontend (Next.js) integration
-* MetaMask connection
-* Auction UI
+- Public testnet deployment (Sepolia)
+- Production deployment
+- Mobile UI optimization
 
 ---
 
-## 🏗️ System Architecture (Designed)
+## 🏗️ System Architecture (Implemented)
 
 ```
 Frontend (Next.js + Tailwind CSS)
@@ -51,7 +56,7 @@ Ethers.js (Web3 Interface)
         ↓
 Smart Contracts (Solidity)
         ↓
-Ethereum Blockchain (Sepolia / Local Hardhat)
+Hardhat Local Blockchain 
 ```
 
 ---
@@ -59,13 +64,13 @@ Ethereum Blockchain (Sepolia / Local Hardhat)
 ## 🛠️ Technology Stack
 
 | Layer        | Technology                      |
-| ------------ | ------------------------------- |
+|-------------|----------------------------------|
 | Frontend     | Next.js, Tailwind CSS           |
 | Blockchain   | Solidity                        |
 | Framework    | Hardhat                         |
 | Wallet       | MetaMask                        |
 | Web3 Library | ethers.js                       |
-| Network      | Sepolia Testnet / Hardhat Local |
+| Network      | Hardhat Local  
 
 ---
 
@@ -74,7 +79,10 @@ Ethereum Blockchain (Sepolia / Local Hardhat)
 ```
 farmer-trade-dapp/
 │
-├── frontend/        # Next.js frontend (setup done)
+├── frontend/        # Next.js frontend (FULLY IMPLEMENTED)
+│   ├── app/
+│   ├── components/
+│   └── lib/
 │
 └── blockchain/      # Smart contracts & deployment
     ├── contracts/
@@ -90,70 +98,87 @@ farmer-trade-dapp/
 
 ### Core Functionalities Implemented
 
-* Crop listing by farmers
-* Open auction system
-* Buyer bidding using ETH
-* Automatic tracking of highest bid
-* Secure payment transfer to farmer
+- Crop listing by farmers
+- Open auction system
+- Buyer bidding using ETH
+- Automatic tracking of highest bid
+- Secure payment settlement
+- Farmer-only auction termination
 
 ### Key Functions
 
-* `listCrop(name, quantity, basePrice)`
-* `bid(cropId)`
-* `endAuction(cropId)`
+- `listCrop(name, quantity, basePrice)`
+- `bid(cropId)`
+- `endAuction(cropId)`
 
 ---
 
-## 🔄 Designed Transaction Flow
+## 🔄 Live Transaction Flow (Implemented)
 
 ```
 User → MetaMask Login
         ↓
-Farmer → List Crop
+Farmer → List Crop on Blockchain
         ↓
-Buyer → Place Bid
+Buyer → Place Bid using ETH
         ↓
 Smart Contract → Track Highest Bid
         ↓
 Farmer → End Auction
         ↓
-Blockchain → Transfer ETH to Farmer
+Blockchain → Auto Transfer ETH to Farmer
 ```
 
 ---
 
-## ⚙️ Development Status
+## ⚙️ Current Development Status
 
-* Blockchain logic: **Completed**
-* Smart contract: **Completed & compiled**
-* Deployment setup: **Configured**
-* Frontend UI: **Pending (Next Phase)**
-
----
-
-## 🛣️ Upcoming Work
-
-### Phase 1 Completion
-
-* Deploy contract (Local + Testnet)
-* Build auction UI
-* Integrate MetaMask
-
-### Phase 2
-
-* Forward trading contracts
-* Escrow-based settlement
-
-### Phase 3
-
-* Agricultural credit & loan system
-* Analytics dashboard
-
+| Module | Status |
+|----------|----------|
+| Smart Contract | ✅ Completed |
+| Blockchain Setup | ✅ Completed |
+| Local Deployment | ✅ Completed |
+| MetaMask Integration | ✅ Completed |
+| Crop Listing UI | ✅ Completed |
+| Auction Bidding UI | ✅ Completed |
+| End Auction Flow | ✅ Completed |
+| Live Crop Display | ✅ Completed |
+| Error Handling & UX | ✅ Completed |
 
 ---
 
-## 📌 Note
+## 🏆 Phase 1 Achievements
 
-This README documents **current progress** and **technical groundwork** completed toward building a full-scale blockchain-based agricultural trade platform.
+- Fully working **blockchain-based crop auction system**
+- End-to-end **farmer → buyer → settlement flow**
+- Real-time blockchain **read & write integration**
+- Professional **role-based UI**
+- Production-quality **Web3 UX handling**
+
+---
+
+## 🛣️ Future Roadmap
+
+### Phase 2 — Forward Trading
+
+- Future crop contracts
+- Escrow-based trade settlement
+
+### Phase 3 — Credit & Financial Services
+
+- Agricultural loan system
+- Credit scoring
+- Bank integration
+
+### Phase 4 — Analytics & AI
+
+- Farmer profit dashboard
+- Market trend analysis
+- Price prediction
+
+---
+## 📌 Final Note
+
+This project demonstrates a **real-world blockchain application in agriculture**, enabling **trustless, transparent, and fair trading for farmers**.
 
 ---

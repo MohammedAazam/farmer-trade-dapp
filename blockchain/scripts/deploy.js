@@ -4,9 +4,9 @@ async function main() {
   const Auction = await ethers.getContractFactory("FarmerAuction");
   const auction = await Auction.deploy();
 
-  await auction.deployed();
+  await auction.waitForDeployment();
 
-  console.log("Auction deployed to:", auction.address);
+  console.log("Auction deployed to:", await auction.getAddress());
 }
 
 main()
