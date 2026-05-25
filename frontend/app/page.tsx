@@ -355,7 +355,7 @@ export default function Home() {
     <div className="grid lg:grid-cols-3 gap-8">
       <div className="lg:col-span-1 space-y-6">
         <Card className="p-6">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
             <PlusCircle className="text-emerald-500" /> Actions
           </h3>
 
@@ -366,7 +366,7 @@ export default function Home() {
                 onClick={() => setSubTab(tab)}
                 className={`flex-1 py-1.5 text-sm font-medium rounded-md capitalize transition-all ${
                   subTab === tab
-                    ? "bg-white text-slate-900 shadow-sm"
+                    ? "bg-white text-white shadow-sm"
                     : "text-slate-500 hover:text-slate-700"
                 }`}
               >
@@ -501,7 +501,7 @@ export default function Home() {
                       <Sprout size={20} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">{c.name}</h4>
+                      <h4 className="font-semibold text-white">{c.name}</h4>
                       <p className="text-xs text-slate-500">ID: #{c.id}</p>
                     </div>
                   </div>
@@ -558,7 +558,7 @@ export default function Home() {
     <div className="grid lg:grid-cols-3 gap-8">
       <div className="lg:col-span-1 space-y-6">
         <Card className="p-6">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
             <Handshake className="text-blue-500" /> Trading Desk
           </h3>
           <div className="flex bg-slate-100 p-1 rounded-lg mb-6">
@@ -568,7 +568,7 @@ export default function Home() {
                 onClick={() => setSubTab(tab)}
                 className={`flex-1 py-1.5 text-sm font-medium rounded-md capitalize transition-all ${
                   subTab === tab
-                    ? "bg-white text-slate-900 shadow-sm"
+                    ? "bg-white text-white shadow-sm"
                     : "text-slate-500 hover:text-slate-700"
                 }`}
               >
@@ -667,7 +667,7 @@ export default function Home() {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCropId(e.target.value)}
                 icon={CheckCircle2}
               />
-              <Button
+              <Button  
                 onClick={() =>
                   handleTransaction(async () => {
                     if (!forward) throw new Error("Forward contract not initialized");
@@ -699,7 +699,7 @@ export default function Home() {
               )}
               <div className="p-5 border-l-4 border-l-blue-500 h-full">
                 <div className="flex justify-between mb-2">
-                  <h4 className="font-bold text-slate-900">{d.crop}</h4>
+                  <h4 className="font-bold text-white">{d.crop}</h4>
                   <span className="text-xs text-slate-400">#{d.id}</span>
                 </div>
                 <div className="space-y-2 text-sm">
@@ -749,7 +749,7 @@ export default function Home() {
     <div className="grid lg:grid-cols-3 gap-8">
       <div className="lg:col-span-1 space-y-6">
         <Card className="p-6">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
             <Landmark className="text-purple-500" /> Micro-Credit
           </h3>
           <div className="flex bg-slate-100 p-1 rounded-lg mb-6">
@@ -759,7 +759,7 @@ export default function Home() {
                 onClick={() => setSubTab(tab)}
                 className={`flex-1 py-1.5 text-sm font-medium rounded-md capitalize transition-all ${
                   subTab === tab
-                    ? "bg-white text-slate-900 shadow-sm"
+                    ? "bg-white text-white shadow-sm"
                     : "text-slate-500 hover:text-slate-700"
                 }`}
               >
@@ -876,7 +876,7 @@ export default function Home() {
                   <Landmark size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-900">Loan #{l.id}</h4>
+                  <h4 className="font-semibold text-white">Loan #{l.id}</h4>
                   <div className="flex gap-4 text-sm mt-1">
                     <span className="text-slate-500">
                       Principal: <span className="text-slate-800 font-medium">{l.amount} ETH</span>
@@ -921,7 +921,7 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-20">
+    <div className="min-h-screen bg-slate-50 font-sans text-white pb-20">
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -931,7 +931,7 @@ export default function Home() {
                 <Sprout className="text-white" size={24} />
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-teal-500">
-                AgriChain
+                AgriTrade Hub
               </span>
             </div>
 
